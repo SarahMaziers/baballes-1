@@ -39,7 +39,7 @@ window.addEventListener('mousemove', event => {
 window.addEventListener('resize', () => {
     animation.canvas.width = window.innerWidth
     animation.canvas.height = window.innerHeight
-
+    // Probably a bit harsh, but good enough at this point in the training
     animation.init()
 })
 
