@@ -7,7 +7,8 @@ const animation = {
     circlesCount: 80,
     mouse: {
         x: undefined,
-        y: undefined
+        y: undefined,
+        zoneSize: 50
     },
     requestId: 0,
 
@@ -16,7 +17,7 @@ const animation = {
         this.canvas.width = window.innerWidth
         this.canvas.height = window.innerHeight
         this.c = this.canvas.getContext('2d')
-        for (let i = 0; i < this.circlesCount ; i++) {
+        for (let i = 0; i < this.circlesCount; i++) {
             this.circlesArray.push(new Circle(this))
         }
         if (this.requestId !== 0) window.cancelAnimationFrame(this.requestId)

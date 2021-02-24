@@ -28,11 +28,10 @@ class Circle {
         this.y += this.dy
 
         // interact with the mouse
-
-        if (this.animation.mouse.x - this.x < 50
-            && this.animation.mouse.x - this.x > -50
-            && this.animation.mouse.y - this.y < 50
-            && this.animation.mouse.y - this.y > -50) {
+        if (this.animation.mouse.x - this.x < this.animation.mouse.zoneSize
+            && this.animation.mouse.x - this.x > -this.animation.mouse.zoneSize
+            && this.animation.mouse.y - this.y < this.animation.mouse.zoneSize
+            && this.animation.mouse.y - this.y > -this.animation.mouse.zoneSize) {
             if (this.radius < Circle.maxRadius) {
                 this.radius += 1
             }
